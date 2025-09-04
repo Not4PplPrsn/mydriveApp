@@ -20,10 +20,19 @@ export default function App() {
   return (
     <SafeAreaView>
     <View style={styles.container}>
-      <Image source={{uri:'https://cdn.pixabay.com/photo/2017/10/03/15/54/car-2812943_1280.jpg',
-      
+      <Text style = {[styles.response, {fontSize:40}]}>
+        Driving 
+      </Text>
+
+      <Image source={{uri:'https://cdn.pixabay.com/photo/2017/10/03/15/54/car-2812943_1280.jpg',   
       }}
       style={styles.Image}/> 
+      <Text style = {styles.response}>
+        Age: {age}
+      </Text>
+      <Text>
+        Liscence: {yearsexp}
+      </Text>
       <Text style ={styles.response}>
          {feedback}
       </Text>
@@ -49,8 +58,15 @@ const styles = StyleSheet.create({
   
   },
   Image:{
-    width: 400,
-  height: 350
-  }
+    width: '40%',
+    height: '30%',
+    alignItems: 'center',
+    padding: '30%', 
+    marginVertical: 30
+  },
+  content:{
+    alignItems: 'center',
+
+  },
   
 });
